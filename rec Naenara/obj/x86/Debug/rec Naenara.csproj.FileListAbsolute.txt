@@ -1,0 +1,7 @@
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec_Naenara.Form1.resources
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec_Naenara.Properties.Resources.resources
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec Naenara.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\bin\Debug\rec Naenara.exe
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\bin\Debug\rec Naenara.pdb
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec Naenara.exe
+c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec Naenara.pdb
