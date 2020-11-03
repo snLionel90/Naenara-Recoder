@@ -5,3 +5,6 @@ c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\bin\
 c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\bin\Debug\rec Naenara.pdb
 c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec Naenara.exe
 c:\users\user\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec Naenara.pdb
+C:\Users\USER\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec Naenara.csprojResolveAssemblyReference.cache
+C:\Users\USER\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\bin\Debug\NAudio.dll
+C:\Users\USER\documents\visual studio 2010\Projects\rec Naenara\rec Naenara\obj\x86\Debug\rec_Naenara.Form2Wave.resources

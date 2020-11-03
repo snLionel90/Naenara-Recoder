@@ -17,44 +17,37 @@ namespace rec_Naenara
 {
     public partial class Form1 : Form
     {
-        private Thread cpuThread;
-        private Double cpuArray;
+        //private Spectra spc;
+
+        [DllImport("winmm.dll")]
+        private static extern int mciSendString(string MciComando, string MciRetrno, int MciRetrnoLeng, IntPtr Callback);
+
         public Form1()
         {
             InitializeComponent();
-            lblURL.Text = "https://github.com/snLionel90/";
+            lblURL.Text = "https://github.com/snLionel90/ ";
+            lblURL2.Text = "Naenara Voice Recorder (c) sn.Lionel90 ";
+            spectrum();
         }
-        [DllImport("winmm.dll")]
-        private static extern int mciSendString(string MciComando, string MciRetrno, int MciRetrnoLeng, IntPtr Callback);
-        string record = "";
 
+        private void spectrum()
+        {
+            //throw new NotImplementedException();
+        }
+
+        
         private void btn_record_Click(object sender, EventArgs e)
         {
             //Recording at PCM Line 16bits 44.1Khz 1536kbps
             mciSendString("open new type waveaudio alias Som", null, 0, IntPtr.Zero);
             mciSendString("record Som", null, 0, IntPtr.Zero);
-            ldlRec.Text = "Recording at PCM Line 16bits 44.1Khz 1536kbps";
+            ldlRec.Text = "Recording...";
             ldlRec.ForeColor = System.Drawing.Color.Red;
             microphone.Image = Properties.Resources.Micro;
             btn_record.Image = Properties.Resources.Recordoff;
             timer1.Start();
             cd.Start();
-        }
-
-        private void btn_play_Click(object sender, EventArgs e)
-        {
-            if (record == "")
-            {
-                btn_play.Image = Properties.Resources.noplay;
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "wave |*.wav";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    record = ofd.FileName;
-                }
-                mciSendString("play " + record, null, 0, IntPtr.Zero);
-                ldlRec.Text = "Playing";
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,10 +70,11 @@ namespace rec_Naenara
             {
                 mciSendString("save Som" + sfd.FileName, null, 0, IntPtr.Zero);
                 mciSendString("close Som", null, 0, IntPtr.Zero);
-                ldlRec.Text = "Saved";
+                ldlRec.Text = "File Saved! " ;
             }
 
         }
+
         System.Diagnostics.Stopwatch cd = new System.Diagnostics.Stopwatch();
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -93,8 +87,17 @@ namespace rec_Naenara
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }    
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Naenara Voice Recorder (c) sn.Lionel90");         
         }
 
-        
+        private void btn_Analyzer_Click(object sender, EventArgs e)
+        {
+            Form2Wave f2w = new Form2Wave();
+            f2w.Show();
+        }
     }
 }
